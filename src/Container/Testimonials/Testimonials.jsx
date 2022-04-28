@@ -43,7 +43,7 @@ const Testimonials = () => {
     <section className='app__bg app__wrapper section__padding' id='testimonials'>
       {/* <h5>Review from clients</h5>
       <h2>Testimonials</h2> */}
-      <Swiper className="container testimonials__container"
+      <Swiper className="app__wrapper_info"
        // install Swiper modules
        modules={[ Pagination]}
        spaceBetween={50}
@@ -56,14 +56,18 @@ const Testimonials = () => {
          data.map(({avatar,name,review}, index)=>{
            return(
             <SwiperSlide key={index} className="testimonial">
-                  <h1 className="">What Our Diner Say</h1>
-                <div className="testimonial__contents">
+                 <h1 className="headtext__cormorant">What Our Diner Say</h1>
+                  
+                <div className="app__testimonial-contents">
                 <div className="client__avatar">
               <img src={avatar} alt="Avatar one" />
-              <h5 className='client__name'>{name}</h5>
-               
-               <p className='open__sans'>{review}</p>
               </div>
+              <h5 className='client__name'>{name}</h5>
+               <div className="client__review">
+               <p className='p__opensans review'>{review}</p>
+               </div>
+              
+
                 </div>
                  
            
